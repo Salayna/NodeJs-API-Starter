@@ -100,9 +100,9 @@ async insert(data) {
 /**
  * DELETE the user by his username in parameter
  */
-  async delete(username) {
+  async delete(id) {
     try {
-      let item = await this.model.deleteOne({ username: username });
+      let item = await this.model.deleteOne({ id: id });
       if (!item)
         return {
           error: true,

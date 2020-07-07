@@ -1,14 +1,14 @@
-/** Fichier source gérant la base de donnée (utilisé une seul fois) */
+/**
+ * This class will the the one managing the database, 
+ * it's a singleton so it's only instanciate once 
+ * but since it's using a global promise its instance can be called in multiple location in the code
+ */
 
 require('dotenv').config();
 import mongoose from 'mongoose';
 
 
-/**
- * Singleton: Classe instanciable qu'une fois
- * Il sera automatiquement utiliser par Node lors de son instanciation et donc sera utiliser qu'une fois
- */
-// Connexion à la BDD MongoDB en ligne
+
 class Connection {
   constructor() {
     try {
@@ -16,7 +16,7 @@ class Connection {
     console.log('Establish new connection with database');
     console.log("using environment var : ", url);
 
-    //mongoose.Promise = global.Promise; -> Scope Global peut être appeler à plusieur endroit du code
+    //mongoose.Promise = global.Promise; -> Global Promise
     mongoose.Promise = global.Promise;
     mongoose.set('useNewUrlParser', true);
     mongoose.set('useFindAndModify', false);
@@ -30,6 +30,5 @@ class Connection {
   }
 }
 
-// Utilisé dans /index.js
 export default new Connection();
 

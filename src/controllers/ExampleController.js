@@ -1,3 +1,6 @@
+/**
+ * This class will handle the request and the response of the services and the Database
+ */
 import Service from "../services/ExampleService";
 
 class Controller {
@@ -34,7 +37,6 @@ class Controller {
       }
     }
   
-    // patch('/api/notes/:id')
     async updateExample(req, res) {
       let response = await this.service.update(req.params.id, req.body);
       console.log(response);
@@ -60,5 +62,4 @@ class Controller {
   
   }
   
-  // Utilisé dans /config/routes.js
   export default new Controller();

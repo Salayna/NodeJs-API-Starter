@@ -1,5 +1,5 @@
-/** Fichier exécuté en premier par Node
- * Permet d'éxécuter le serveur
+/** 
+ * File that Node will start to start our API and where we launch our server
  */
 require('dotenv').config();
 import './config/database';
@@ -7,7 +7,7 @@ import server from './config/server';
 
 const PORT = process.env.PORT;
 
-// Démarrage du serveur sur : "localhost:5000"
+// Sarting the Server
 server.listen(PORT, () => {
   console.log(`app running on port ${PORT}`);
 });

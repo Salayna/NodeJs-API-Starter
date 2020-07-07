@@ -1,4 +1,4 @@
-/** Fichier source affichant toutes les routes disponibles du serveur */
+/** FIle Containing all of our API's Routes*/
 
 // Import Controller
     import controller from "../src/controllers/ExampleController";
@@ -10,15 +10,13 @@ export default (app) => {
   
 /**
    * Here you place your Routes
-   * (Example)
-   * app.post('/api/signup', Controller.Method);
    */
     app.get('/', function(req,res) {
         res.send("Welcome to your API");
     })
     .get('/api/example', controller.getExample)
     .put('/api/example', controller.createExample)
-    .patch('/api/example', controller.updateExample)
-    .delete('api/example', controller.deleteExample);
+    .patch('/api/example/:id', controller.updateExample)
+    .delete('/api/example/:id', controller.deleteExample);
     
 }
