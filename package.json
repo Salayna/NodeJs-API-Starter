@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-mongodb-api-starter",
+  "version": "0.1.0",
+  "description": "NodeJS API starter",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js",
+    "dev:start": "clear; nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salayna/NodeJs-MongoDB-API-Starter.git"
+  },
+  "author": "Salayna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salayna/NodeJs-MongoDB-API-Starter/issues"
+  },
+  "homepage": "https://github.com/Salayna/NodeJs-MongoDB-API-Starter#readme"
+}
