@@ -1,6 +1,7 @@
 /** Fichier source affichant toutes les routes disponibles du serveur */
 
-// Importation des Controllers
+// Import Controller
+    import controller from "../src/controllers/ExampleController";
 
 
 // Utilisé dans /config/server.js
@@ -14,6 +15,10 @@ export default (app) => {
    */
     app.get('/', function(req,res) {
         res.send("Welcome to your API");
-    });
+    })
+    .get('/api/example', controller.getExample)
+    .put('/api/example', controller.createExample)
+    .patch('/api/example', controller.updateExample)
+    .delete('api/example', controller.deleteExample);
     
 }
