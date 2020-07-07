@@ -1,2 +1,4 @@
 # NodeJs-MongoDB-API-Starter
-A simple repository for a quick api setup
+
+## Introduction
+This project is just a quick setup for an API using Express JS and MongoDB
