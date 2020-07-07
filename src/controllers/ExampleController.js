@@ -46,7 +46,7 @@ class Controller {
       }
     }
   
-    // delete('/api/notes/:id')
+    
     async deleteExample(req, res) {
       let response = await this.service.delete(req.params.id);
       console.log(response);
