@@ -15,7 +15,7 @@ class Controller {
   
     // get('/api/notes')
     async getExample(req, res) {
-      let response = await this.service.get(req.headers);
+      let response = await this.service.get(req.query);
       console.log(response);
       if (response.statusCode) {
         res.status(response.statusCode).send(response);
